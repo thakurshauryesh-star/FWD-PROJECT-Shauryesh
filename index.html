@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STUDENT TOOLKIT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h2> STUDENT-TOOLKIT</h2>
+    <ul>
+        <li onclick="showSection(event,'quotes')" class="active">Motivation</li>
+        <li onclick="showSection(event,'calc')">Calculator</li>
+        <li onclick="showSection(event,'notes')"> Short Notes</li>
+        <li onclick="showSection(event,'watch')">Watch</li>
+        <li onclick="showSection(event,'progress')">TO-DO List</li>
+        <li onclick="showSection(event,'pomodoro')">Pomodoro</li>
+        <li onclick="showSection(event,'breath')">Breathing</li>
+    </ul>
+</nav>
+
+
+<section id="quotes" class="section large">
+    <h1>QUOTES</h1>
+    <p id="quote"></p>
+    <p id="author"></p>
+    <button onclick="newQuote()">New Thought</button>
+    <button onclick="addFav()">❤️ Favourite Quotes</button>
+    <h3>FAVOURITES</h3>
+    <div id="favList"></div>
+</section>
+
+
+<section id="calc" class="section">
+    <h2>Calculator</h2>
+    <input id="calcInput">
+    <div class="grid">
+        <button onclick="press('7')">7</button>
+        <button onclick="press('8')">8</button>
+        <button onclick="press('9')">9</button>
+        <button onclick="press('+')">+</button>
+
+        <button onclick="press('4')">4</button>
+        <button onclick="press('5')">5</button>
+        <button onclick="press('6')">6</button>
+        <button onclick="press('-')">-</button>
+
+        <button onclick="press('1')">1</button>
+        <button onclick="press('2')">2</button>
+        <button onclick="press('3')">3</button>
+        <button onclick="press('*')">*</button>
+
+        <button onclick="press('0')">0</button>
+        <button onclick="press('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="press('/')">/</button>
+
+        <button onclick="press('Math.sqrt(')">√</button>
+        <button onclick="press('Math.log(')">log</button>
+        <button onclick="press('Math.sin(')">sin</button>
+        <button onclick="press('Math.cos(')">cos</button>
+
+        <button onclick="press('Math.tan(')">tan</button>
+        <button onclick="press('Math.PI')">π</button>
+        <button onclick="press('**')">^</button>
+        <button onclick="clearCalc()">C</button>
+    </div>
+</section>
+
+
+<section id="notes" class="section large">
+    <h2>SMART NOTES</h2>
+    <input id="subject" placeholder="SUBJECT">
+    <select id="type">
+        <option>THEORY</option>
+        <option>FORMULA</option>
+        <option>IMPORTANT</option>
+    </select>
+    <textarea id="noteArea"></textarea>
+    <button onclick="saveNote()">Save</button>
+    <div id="allNotes" class="notes-grid"></div>
+</section>
+
+
+<section id="watch" class="section">
+    <h2>Stopwatch</h2>
+    <div class="clock" id="clock">0.0</div>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="reset()">Reset</button>
+</section>
+
+
+<section id="progress" class="section">
+    <h2>TO - DO LIST</h2>
+    <input id="taskInput" placeholder="Enter your Task">
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
+
+    <p id="progressText">0%</p>
+    <div class="bar"><div id="fill"></div></div>
+</section>
+
+
+<section id="pomodoro" class="section">
+    <h2>Pomodoro</h2>
+    <h1 id="pomoTime">25:00</h1>
+    <button onclick="startPomo()">Start</button>
+</section>
+
+
+<section id="breath" class="section">
+    <h2> Breathing Excercise</h2>
+    <h1 id="breathText">Let's Start</h1>
+    <div id="circle"></div>
+    <button onclick="startBreathing()">Start</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
